@@ -1,8 +1,8 @@
-
-
-
-conda create -n venv python=3.9
-
-conda activate venv
-
-conda deactivate
+pandas
+numpy
+matplotlib
+plotly
+bokeh
+flask
+sqlalchemy
+openpyxl
