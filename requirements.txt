@@ -6,3 +6,5 @@ bokeh
 flask
 sqlalchemy
 openpyxl
+nbformat
+ipykernel
