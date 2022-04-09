@@ -1,0 +1,5 @@
+Avg_Annual_pay_per_player
+Percent_Change_From Last_Year
+Total_Payroll
+Avg_player_5_year_earnings
+Percent_change_over_last_5_years
