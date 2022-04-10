@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<style>
+
+</style>
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="pay2014g"></div>
+            <p class="lead text-center">Boxing was the highest paying sport in 2014</p>
+        </div>
+        <div class="col-md-12">
+            <div id="salwing"></div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block js %}
+
+<script>
+    var graph1 = {{pay2014graph | safe}}
+    var graph2 = {{salwingraph | safe}}
+    Plotly.plot('pay2014g',graph1, {})
+    Plotly.plot('salwing',graph2, {})
+</script>
+{% endblock %}
+
