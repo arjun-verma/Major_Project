@@ -11,11 +11,32 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div id="pay2014g"></div>
+            <div id="payhistg"></div>
             <p class="lead text-center">Boxing was the highest paying sport in 2014</p>
         </div>
         <div class="col-md-12">
-            <div id="salwing"></div>
+            <div id="salhistg"></div>
+        </div>
+        <div class="col-md-12">
+            <div id="endhistg"></div>
+        </div>
+        <div class="col-md-12">
+            <div id="paybarg"></div>
+        </div>
+        <div class="col-md-12">
+            <div id="salbarg"></div>
+        </div>
+        <div class="col-md-12">
+            <div id="endbarg"></div>
+        </div>
+        <div class="col-md-12">
+            <div id="payscatterg"></div>
+        </div>
+        <div class="col-md-12">
+            <div id="endscatterg"></div>
+        </div>
+        <div class="col-md-12">
+            <div id="salscatterg"></div>
         </div>
     </div>
 </div>
@@ -25,10 +46,26 @@
 {% block js %}
 
 <script>
-    var graph1 = {{pay2014graph | safe}}
-    var graph2 = {{salwingraph | safe}}
-    Plotly.plot('pay2014g',graph1, {})
-    Plotly.plot('salwing',graph2, {})
+    var graph = {{payhist | safe}}
+    var graph1 = {{salhist | safe}}
+    var graph2 = {{endhist | safe}}
+    var graph3 = {{paybar | safe}}
+    var graph4 = {{salbar | safe}}
+    var graph5 = {{endbar | safe}}
+    var graph6 = {{payscatter | safe}}
+    var graph7 = {{endscatter | safe}}
+    var graph8 = {{salscatter | safe}}
+    console.log(graph8)
+    Plotly.plot('payhistg',graph, {})
+    Plotly.plot('salhistg',graph1, {})
+    Plotly.plot('endhistg',graph2, {})
+    Plotly.plot('paybarg',graph3, {})
+    Plotly.plot('salbarg',graph4, {})
+    Plotly.plot('endbarg',graph5, {})
+    Plotly.plot('payscatterg',graph6, {})
+    Plotly.plot('endscatterg',graph7, {})
+    Plotly.plot('salscatterg',graph8, {})
+
 </script>
 {% endblock %}
 
