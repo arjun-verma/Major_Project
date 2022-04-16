@@ -22,7 +22,7 @@ def index():
     fig4 = px.bar(df,x=df.index,y='Salary_Winnings',color ='Pay2014',log_y=True,title="Salary Winning median")
     fig5 = px.bar(df,x=df.index,y='Endorsements',color ='Pay2014',log_y=True,title="Endorsement median")
     fig6 = px.scatter(dfs, x="Sport", y="Pay2014",title="Payout",labels={"Pay2014" : "Payout"})
-    fig7 = px.bar(df,x=df.index,y='Endorsements',color ='Pay2014',log_y=True,title="Endorsement median")
+    fig7 = px.scatter(dfs, x="Sport", y="Endorsements",title="Endorsements")
     fig8 = px.scatter(dfs, x="Sport", y="Salary_Winnings",title="salary winning")
     graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
     graphJSON1 = json.dumps(fig1, cls=plotly.utils.PlotlyJSONEncoder)
