@@ -10,6 +10,7 @@
 
 <div class="container">
     <div class="row">
+        <h1>For Players</h1>
         <div class="col-md-12">
             <div id="payhistg"></div>
             <p class="lead text-center">Boxing was the highest paying sport in 2014</p>
@@ -38,6 +39,45 @@
         <div class="col-md-12">
             <div id="salscatterg"></div>
         </div>
+        <h1> For Teams</h1>
+        <div class="col-md-12">
+            <div id="aapppg"></div>
+            </div>
+        </div><div class="col-md-12">
+            <div id="pcflysg"></div>
+            </div>
+        </div><div class="col-md-12">
+            <div id="tpg"></div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div id="apl5yeg"></div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div id="pcfl5yg"></div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div id="box1g"></div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div id="box2g"></div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div id="box3g"></div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div id="box4g"></div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div id="box5g"></div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -55,6 +95,16 @@
     var graph6 = {{payscatter | safe}}
     var graph7 = {{endscatter | safe}}
     var graph8 = {{salscatter | safe}}
+    var graph9 = {{aappp | safe}}
+    var graph10 = {{pcflys | safe}}
+    var graph11 = {{tp | safe}}
+    var graph12 = {{apl5ye | safe}}
+    var graph13 = {{pcfl5y | safe}}
+    var graph14 = {{box1 | safe}}
+    var graph15 = {{box2 | safe}}
+    var graph16 = {{box3 | safe}}
+    var graph17 = {{box4 | safe}}
+    var graph18 = {{box5 | safe}}
     Plotly.plot('payhistg',graph, {})
     Plotly.plot('salhistg',graph1, {})
     Plotly.plot('endhistg',graph2, {})
@@ -64,6 +114,16 @@
     Plotly.plot('payscatterg',graph6, {})
     Plotly.plot('endscatterg',graph7, {})
     Plotly.plot('salscatterg',graph8, {})
+    Plotly.plot('aapppg',graph9, {})
+    Plotly.plot('pcflysg',graph10, {})
+    Plotly.plot('tpg',graph11, {})
+    Plotly.plot('apl5yeg',graph12, {})
+    Plotly.plot('pcfl5yg',graph13, {})
+    Plotly.plot('box1g',graph14, {})
+    Plotly.plot('box2g',graph15, {})
+    Plotly.plot('box3g',graph16, {})
+    Plotly.plot('box4g',graph17, {})
+    Plotly.plot('box5g',graph18, {})
 
 </script>
 {% endblock %}

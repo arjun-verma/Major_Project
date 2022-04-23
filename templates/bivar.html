@@ -10,8 +10,31 @@
 
 <div class="container">
     <div class="row">
+        <h1>For Players</h1>
         <div class="col-md-12">
-        
+            <div id="sp1g"></div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div id="sp2g"></div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div id="sp3g"></div>
+            </div>
+        </div>
+        <h1> For Teams</h1>
+        <div class="col-md-12">
+            <div id="box1"></div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div id="box2"></div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div id="box3"></div>
+            </div>
         </div>
     </div>
 </div>
@@ -21,6 +44,18 @@
 {% block js %}
 
 <script>
+    var graph = {{sp1 | safe}}
+    var graph1 = {{sp2 | safe}}
+    var graph2 = {{sp3 | safe}}
+    var graph3 = {{box1 | safe}}
+    var graph4 = {{box2 | safe}}
+    var graph5 = {{box3 | safe}}
+    Plotly.plot('sp1g',graph, {})
+    Plotly.plot('sp2g',graph1, {})
+    Plotly.plot('sp3g',graph2, {})
+    Plotly.plot('box1',graph3, {})
+    Plotly.plot('box2',graph4, {})
+    Plotly.plot('box3',graph5, {})
     
 </script>
 {% endblock %}
