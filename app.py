@@ -8,7 +8,10 @@ import plotly
 
 app = Flask(__name__)
 
-
+@app.route('/home')
+def home():
+    
+    return render_template('home.html')
 
 @app.route('/')
 def index():
@@ -112,12 +115,16 @@ def bivar():
     fig3 = px.scatter(dft,x='Avg_Annual_pay_per_player',y='Avg_player_5_year_earnings',color='Avg_player_5_year_earnings',title = 'Average annual pay per player vs Average player 5 year earning')
     fig4 = px.scatter(dft,x='Avg_player_5_year_earnings',y='Total_Payroll',color='Total_Payroll',title = 'Average player 5 year earning vs Total Payroll')
     fig5 = px.scatter(dft,x='Percent_Change_From Last_Year',y='Percent_change_over_last_5_years',color='Percent_change_over_last_5_years',title = 'Percent change in last year vs Percent change in last 5 year')
+    fig6 = px.scatter_3d(dft,x='Avg_Annual_pay_per_player',y='Avg_player_5_year_earnings',z='Total_Payroll',color='Avg_Annual_pay_per_player',title = 'Average Annual vs Average 5 Year Annual vs Total Pay')
+    fig7 = px.scatter_3d(dfs,x='Payout',y='Salary_Winnings',z='Endorsements',color='Payout',title='Payout vs Sallary Winnings vs Endorsement')
     graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
     graphJSON1 = json.dumps(fig1, cls=plotly.utils.PlotlyJSONEncoder)
     graphJSON2 = json.dumps(fig2, cls=plotly.utils.PlotlyJSONEncoder)
     graphJSON3 = json.dumps(fig3, cls=plotly.utils.PlotlyJSONEncoder)
     graphJSON4 = json.dumps(fig4, cls=plotly.utils.PlotlyJSONEncoder)
     graphJSON5 = json.dumps(fig5, cls=plotly.utils.PlotlyJSONEncoder)
+    graphJSON6 = json.dumps(fig6, cls=plotly.utils.PlotlyJSONEncoder)
+    graphJSON7 = json.dumps(fig7, cls=plotly.utils.PlotlyJSONEncoder)
   
     return render_template(
         'bivar.html',
@@ -126,7 +133,14 @@ def bivar():
         sp3=graphJSON2,
         box1=graphJSON3,
         box2=graphJSON4,
-        box3=graphJSON5,)
+        box3=graphJSON5,
+        td1=graphJSON6,
+        td2=graphJSON7,)
+
+@app.route('/about')
+def about():
+
+    return render_template('about.html')
 
 if __name__ == '__main__':
   app.run(host='127.0.0.1', port=8000, debug=True)

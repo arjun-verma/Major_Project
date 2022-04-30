@@ -8,22 +8,49 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 
-    {% block css %}{% endblock %}
+    {% block css %}
+    <style>
+    body {
+        background-color: #ffffff;
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-attachment: fixed;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        color: #000000;
+        background-color: #ffffff;
+    }
+
+    p {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: bold;
+        color: #000000;
+        background-color: #ffffff;
+    }
+    </style>
+    {% endblock %}
     
 </head>
 <body>
     
         <nav class="navbar navbar-expand-lg navbar-light bg-warning">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/">GSFA</a>
+                <a class="navbar-brand" href="/home">GSFA</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarID"
                     aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarID">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                        <a class="nav-link active" aria-current="page" href="/bivar">Bivariate analysis</a>
+                        <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/">Univariate analysis</a>
+                        <a class="nav-link active" aria-current="page" href="/bivar">Multivariate analysis</a>
                         <a class="nav-link active" aria-current="page" href="/about">About</a>
                         
                     </div>
