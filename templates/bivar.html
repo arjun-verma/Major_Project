@@ -17,9 +17,19 @@
     }
 
     p {
-        text-align: center;
+        text-align: left;
         font-family: Arial, sans-serif;
         font-size: 14px;
+        font-style: normal;
+        font-weight: bold;
+        color: #000000;
+        background-color: #ffffff;
+    }
+
+    .new {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
         font-style: normal;
         font-weight: bold;
         color: #000000;
@@ -36,47 +46,76 @@
         <h2>For Players</h2>
         <div class="col-md-12">
             <div id="sp1g"></div>
-            <p></p>
-            </div>
-        </div>
-        <div class="col-md-12">
-            <div id="sp2g"></div>
-            <p></p>
-            </div>
-        </div>
-        <div class="col-md-12">
-            <div id="sp3g"></div>
-            <p></p>
-            </div>
-        </div>
-        <h1> For Teams</h1>
-        <div class="col-md-12">
-            <div id="box1"></div>
-            <p></p>
-            </div>
-        </div>
-        <div class="col-md-12">
-            <div id="box2"></div>
-            <p></p>
-            </div>
-        </div>
-        <div class="col-md-12">
-            <div id="box3"></div>
-            <p></p>
-            </div>
-        </div>
-        <h3>Trivariate Analysis</h3>
-        <div class="col-md-12">
-            <div id="td1g"></div>
-            <p></p>
-            </div>
-        </div>
-        <div class="col-md-12">
-            <div id="td2g"></div>
-            <p></p>
-            </div>
+            <p class="new">This graph is showing the data comparison between Payout and Salary winning of the year 2014.
+                In this graph, the highest winning salary is around 100m, and the highest payout is around 110m .The
+                data of both Salary winning and payout are looking similar to each other and if we look the average of
+                salary winning is around 30m whereas the average payout could be also estimated around 30m . This graph
+                could be helpful to. Understand the difference between the salary of winning and payout so they can find
+                a better solution for a better result in sports for salary of winning and payout. </p>
         </div>
     </div>
+    <div class="col-md-12">
+        <div id="sp2g"></div>
+        <p class="new">In this graph two data sets are included and are shown for comparison between payout and
+            Endorsements of sports. The data of both payout and endorsement are having the most of sports with 20m and
+            around 30m respectively. the highest payout is above 100m and less than 110m and the highest endorsement is
+            around 50 or above and most of the sports have around 30m or less than 30m payouts and around or less than
+            20m endorsement. This graph can be used to study for understanding the difference between payout and
+            endorsement for improving the payout and endorsement.</p>
+    </div>
+</div>
+<div class="col-md-12">
+    <div id="sp3g"></div>
+    <p class="new">This graph is presenting the data of Salary winning and the endorsement of sports in which the
+        highest endorsement is more than 50m and the highest salary winning of sports is more than 100m but the most of
+        the endorsement is recorded between 0 to 10 whereas the most of the salary winning is recorded between 0 to 20 .
+        This graph shows the difference between endorsement and salary winning so we can make some improvement by
+        analysing the data.</p>
+</div>
+</div>
+<h1> For Teams</h1>
+<div class="col-md-12">
+    <div id="box1"></div>
+    <p class="new">In this graph both Average Annual Pay Per Player and Average Player from 5 Years Earning is being
+        compared. When we compare the data of Average annual per player and player from last five year earning, we can
+        see that there is a big difference between them. And the amount of average annual pay per players is lower than
+        the average player five years earning. We can see the highest average annual pay per person around and above
+        5000000 whereas the average player 5 years of earning around 3500000. This graph can be helping to understand
+        the difference between the Average annual pay per person and the Average player 5 year earning. </p>
+</div>
+</div>
+<div class="col-md-12">
+    <div id="box2"></div>
+    <p class="new">In this graph the comparison of average players earning, and total payroll has been showed and there
+        is a huge difference between them. The graph shows that average players earning from last five years was around
+        50000000$ and the total pay roll was around 250000000$. Total pay roll amount is high enough for almost most
+        players to earn a lot of money from sports. Some sports get a huge amount of audience and earn this much of
+        amount while some sorts get average amount of earning from audience. By seeing the graph, we can say that some
+        sports have become so popular in the world that rests in this much of earning from audience. </p>
+</div>
+</div>
+<div class="col-md-12">
+    <div id="box3"></div>
+    <p class="new">This graph contains the data of Percent change from last year and percent change over last five
+        years. We can see that in the last year the highest change was above 200 and the lowest change was recorded in
+        negative and we can say that there was negative changes in some of the sports while most of the sports have
+        changes between 0 to 50 and in last five years the highest changes was more than 300 but the least change was
+        around 100 and the most of the changes was between 100 to 200 . This graph is useful to understand what types of
+        changes can be occurred throughout five years and throughout one year. </p>
+</div>
+</div>
+<h3>Trivariate Analysis</h3>
+<div class="col-md-12">
+    <div id="td1g"></div>
+    <p class="new"></p>
+</div>
+</div>
+<div class="col-md-12">
+    <div id="td2g"></div>
+    <p class="new"></p>
+</div>
+</div>
+</div>
 </div>
 
 {% endblock %}
@@ -84,23 +123,22 @@
 {% block js %}
 
 <script>
-    var graph = {{sp1 | safe}}
-    var graph1 = {{sp2 | safe}}
-    var graph2 = {{sp3 | safe}}
-    var graph3 = {{box1 | safe}}
-    var graph4 = {{box2 | safe}}
-    var graph5 = {{box3 | safe}}
-    var graph6 = {{td1 | safe}} 
-    var graph7 = {{td1 | safe}} 
-    Plotly.plot('sp1g',graph, {})
-    Plotly.plot('sp2g',graph1, {})
-    Plotly.plot('sp3g',graph2, {})
-    Plotly.plot('box1',graph3, {})
-    Plotly.plot('box2',graph4, {})
-    Plotly.plot('box3',graph5, {})
-    Plotly.plot('td1g',graph6, {})
-    Plotly.plot('td2g',graph7, {})
-    
+    var graph = {{ sp1 | safe}}
+    var graph1 = {{ sp2 | safe}}
+    var graph2 = {{ sp3 | safe}}
+    var graph3 = {{ box1 | safe}}
+    var graph4 = {{ box2 | safe}}
+    var graph5 = {{ box3 | safe}}
+    var graph6 = {{ td1 | safe}}
+    var graph7 = {{ td1 | safe}}
+    Plotly.plot('sp1g', graph, {})
+    Plotly.plot('sp2g', graph1, {})
+    Plotly.plot('sp3g', graph2, {})
+    Plotly.plot('box1', graph3, {})
+    Plotly.plot('box2', graph4, {})
+    Plotly.plot('box3', graph5, {})
+    Plotly.plot('td1g', graph6, {})
+    Plotly.plot('td2g', graph7, {})
+
 </script>
 {% endblock %}
-
